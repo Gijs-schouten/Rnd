@@ -1,0 +1,36 @@
+int led[14] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+
+int upTime = 75;
+int downTime = 75;
+
+void setup() {
+  for(int i=5; i<=13; i++){
+    pinMode(led[i], OUTPUT);
+  }
+}
+
+void loop() {
+  for (int i = 5; i <= 13; i++) {
+    delay (downTime);
+    digitalWrite(led[i], HIGH);
+    delay (upTime);
+    digitalWrite(led[i], LOW);
+  }
+
+  for (int i = 13; i >= 5; i--) {
+    delay (downTime);
+    digitalWrite(led[i], HIGH);
+    delay (upTime);
+    digitalWrite(led[i], LOW);
+  }
+
+
+
+
+
+
+
+}
+
+
+
